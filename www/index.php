@@ -15,17 +15,19 @@
                 if ($conn->connect_error) {
                     die("Connection failed: " . $conn->connect_error);
                 }
-                /*sentencia ejemplo de insert
+                /*
+                //sentencia ejemplo de insert
                 $insert = 'INSERT INTO Person(id, name) VALUES (111, 'NombrePrueba')';
                 $result = mysqli_query($conn, $insert);
                 echo ($conn->query($insert)) ? "insert ok" : "insert failed";
                  
-
-                ejemplo prepared statement
+                
+                //ejemplo prepared statement
                 $stmt = $conn->prepare('INSERT INTO Person(id, name) VALUES (?, ?)');
-                $stmt->bind_param("is", $id, $name);
+                $stmt->bindParam("is", $id, $name);
                 $id = 222;
                 $name = "Lenin";
+                $stmt->execute();
                 */
 
                 $query = 'SELECT * From Person';
